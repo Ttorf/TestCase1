@@ -2,5 +2,5 @@
 .gradle
 /.idea/
 /.idea/*
-buidl/
+build/
 allure-results/

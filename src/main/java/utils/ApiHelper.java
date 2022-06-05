@@ -67,8 +67,9 @@ public class ApiHelper {
                 .contentType(ContentType.JSON)
                 .when()
                 .body(body)
+                .log().body()
                 .post(path);
-        response.then().log().all().statusCode(statusCode);
+        response.then().log().body().statusCode(statusCode);
         return response;
     }
 
