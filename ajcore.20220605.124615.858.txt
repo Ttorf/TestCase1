@@ -1,0 +1,252 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.9.5 built on Thursday Nov 28, 2019 at 11:28:53 PST
+---- Dump Properties ---
+Dump file: ajcore.20220605.124615.858.txt
+Dump reason: java.lang.RuntimeException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+java.lang.RuntimeException: bad non-abstract method with no code: void org.codehaus.groovy.runtime.callsite.AbstractCallSite.<init>(org.codehaus.groovy.runtime.callsite.CallSiteArray, int, java.lang.String) on public class org.codehaus.groovy.runtime.callsite.AbstractCallSite
+	at org.aspectj.weaver.bcel.LazyMethodGen.<init>(LazyMethodGen.java:223)
+	at org.aspectj.weaver.bcel.LazyClassGen.<init>(LazyClassGen.java:362)
+	at org.aspectj.weaver.bcel.BcelObjectType.getLazyClassGen(BcelObjectType.java:563)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1706)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1657)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1422)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1196)
+	at org.aspectj.weaver.tools.WeavingAdaptor.getWovenBytes(WeavingAdaptor.java:551)
+	at org.aspectj.weaver.tools.WeavingAdaptor.weaveClass(WeavingAdaptor.java:387)
+	at org.aspectj.weaver.loadtime.Aj.preProcess(Aj.java:116)
+	at org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter.transform(ClassPreProcessorAgentAdapter.java:51)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:642)
+	at org.codehaus.groovy.reflection.SunClassLoader.define(SunClassLoader.java:99)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.loadAbstract(GroovySunClassLoader.java:74)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.<init>(GroovySunClassLoader.java:55)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.<init>(GroovySunClassLoader.java:50)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.lambda$static$0(GroovySunClassLoader.java:41)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.codehaus.groovy.vmplugin.v8.Java8.doPrivileged(Java8.java:628)
+	at org.codehaus.groovy.runtime.callsite.GroovySunClassLoader.<clinit>(GroovySunClassLoader.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteGenerator.isCompilable(CallSiteGenerator.java:252)
+	at org.codehaus.groovy.reflection.CachedMethod.createStaticMetaMethodSite(CachedMethod.java:302)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.createStaticMetaMethodSite(StaticMetaMethodSite.java:114)
+	at groovy.lang.MetaClassImpl.createStaticSite(MetaClassImpl.java:3595)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallStaticSite(CallSiteArray.java:73)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.createCallSite(CallSiteArray.java:155)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:21)
+	at io.restassured.config.SSLConfig.<init>(SSLConfig.java:192)
+	at io.restassured.config.SSLConfig.<init>(SSLConfig.java:184)
+	at io.restassured.config.RestAssuredConfig.<init>(RestAssuredConfig.java:41)
+	at io.restassured.RestAssured.<clinit>(RestAssured.java:422)
+	at utils.ApiHelper.generationToken(ApiHelper.java:48)
+	at utils.ApiHelper.<init>(ApiHelper.java:26)
+	at utils.ApiHelper.postRequest(ApiHelper.java:35)
+	at steps.ApiSteps.postRequest(ApiSteps.java:17)
+	at apiTests.negative.product.ValidationTest.validationTest(ValidationTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptTestTemplateMethod(InvocationInterceptor.java:152)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestTemplateMethod(TimeoutExtension.java:92)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.lambda$execute$2(TestTemplateTestDescriptor.java:107)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:270)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:270)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:107)
+	at org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor.execute(TestTemplateTestDescriptor.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+---- System Properties ---
+java.runtime.name=Java(TM) SE Runtime Environment
+org.gradle.internal.worker.tmpdir=E:\Projects\TestCase\build\tmp\test\work
+sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_202\jre\bin
+java.vm.version=25.202-b08
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=;
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.script=
+sun.java.launcher=SUN_STANDARD
+user.country=RU
+sun.os.patch.level=
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=E:\Projects\TestCase
+java.runtime.version=1.8.0_202-b08
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed
+os.arch=amd64
+java.io.tmpdir=C:\Users\torfa\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+os.name=Windows 10
+allure.results.directory=E:\Projects\TestCase\build\allure-results
+sun.jnu.encoding=Cp1251
+java.library.path=C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;e:\apache-maven-3.8.5\bin;C:\Users\torfa\AppData\Local\Microsoft\WindowsApps;F:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.1\bin;;e:\apache-maven-3.8.5\bin;;.
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+org.gradle.native=false
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=10.0
+user.home=C:\Users\torfa
+user.timezone=Europe/Moscow
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+file.encoding=windows-1251
+java.specification.version=1.8
+junit.jupiter.extensions.autodetection.enabled=true
+java.class.path=E:\Projects\TestCase\build\classes\java\test;E:\Projects\TestCase\build\resources\test;E:\Projects\TestCase\build\classes\java\main;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-rest-assured\2.14.0\507a9dae659d854c3439da13aac90a6f3c92fafc\allure-rest-assured-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.rest-assured\rest-assured\5.0.1\134423a40b4f95c06e19acdf631cfabc42904e70\rest-assured-5.0.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-params\5.8.2\ddeafe92fc263f895bfb73ffeca7fd56e23c2cce\junit-jupiter-params-5.8.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-junit5\2.14.0\4ab485a0864f016df3362feea8ce67221118eb2f\allure-junit5-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-junit-platform\2.14.0\da7ebf88eab6031087310cf30b5efe15b34e5835\allure-junit-platform-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-launcher\1.8.2\c334fcee82b81311ab5c426ec2d52d467c8d0b28\junit-platform-launcher-1.8.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-engine\1.8.2\b737de09f19864bd136805c84df7999a142fec29\junit-platform-engine-1.8.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-commons\1.8.2\32c8b8617c1342376fd5af2053da6410d8866861\junit-platform-commons-1.8.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-engine\5.8.2\c598b4328d2f397194d11df3b1648d68d7d990e3\junit-jupiter-engine-5.8.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-api\5.8.2\4c21029217adf07e4c0d0c5e192b6bf610c94bdc\junit-jupiter-api-5.8.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-selenide\2.14.0\1b8ea25def27815ae09dfd905cc1663a72ed508a\allure-selenide-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-attachments\2.14.0\413e1e08b107ca0ad9e39303033b3959d6075afa\allure-attachments-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-test-filter\2.14.0\757da098af402edc1e59e9f8872217ad3160bb24\allure-test-filter-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-java-commons\2.14.0\6f87d3ada35548c4b8affd1f2b255442a6a1b91f\allure-java-commons-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.aspectj\aspectjweaver\1.9.9.1\dcd2703279a94ad909fa3f3d08671cb0f2dabf7\aspectjweaver-1.9.9.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-commandline\2.14.0\fbad4524cc05018be1a07265bacc8b3bd94b7653\allure-commandline-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.projectlombok\lombok\1.18.24\13a394eed5c4f9efb2a6d956e2086f1d81e857d9\lombok-1.18.24.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.codeborne\selenide\5.21.0\c0f3ebd93abe9c391295263bbaafa10693fa2956\selenide-5.21.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.github.bonigarcia\webdrivermanager\4.4.3\64cd6db235f19233e00ee3ded0a1e065cc0a574e\webdrivermanager-4.4.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.9.0\8a1167e089096758b49f9b34066ef98b2f4b37aa\gson-2.9.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.rest-assured\xml-path\5.0.1\1646731dd74406e920f475fa67155059faa46923\xml-path-5.0.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.rest-assured\json-path\5.0.1\2bbbb5d687fe064abb3142acc5f73e6fc929054\json-path-5.0.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.groovy\groovy-json\4.0.1\9ddfa9449e7c285150da50832bb60c95d36848f8\groovy-json-4.0.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.groovy\groovy-xml\4.0.1\7346b1b748aa3653299deb2f3666254b4c04fd06\groovy-xml-4.0.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.rest-assured\rest-assured-common\5.0.1\d2e3b70634884bce7ff65736c27660a6d3ef965b\rest-assured-common-5.0.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.groovy\groovy\4.0.1\d4c93c131c2a3c508835bf7335fa46ba2a76310e\groovy-4.0.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.5.13\efc110bad4a0d45cda7858e6beee1d8a8313da5a\httpmime-4.5.13.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-generator\2.14.0\2d13e79752d5e8afc53cb48820532ff530220713\allure-generator-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.13\e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada\httpclient-4.5.13.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest\2.1\9420ba32c29217b54eebd26ff7f9234d31c3fbb2\hamcrest-2.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.ccil.cowan.tagsoup\tagsoup\1.2.1\5584627487e984c03456266d3f8802eb85a9ce97\tagsoup-1.2.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.opentest4j\opentest4j\1.2.0\28c11eb91f9b6d8e200631d46e20a7f407f2a046\opentest4j-1.2.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-log4j12\1.7.28\9c45c87557628d1c06d770e1382932dc781e3d5d\slf4j-log4j12-1.7.28.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-plugin-api\2.14.0\ec9de71b16172c605a9dfc2f60630d63b595577a\allure-plugin-api-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.allurefw\allure1-model\1.0\cfd4d328364a7736448e42f088b53b5b8fb1c09d\allure1-model-1.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents.client5\httpclient5\5.1\348cdb528f6078d58bdc7e5a6f9a321aa79c5f46\httpclient5-5.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.30\b5a4b6d16ab13e34a88fae84c35cd5d68cac922c\slf4j-api-1.7.30.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\io.qameta.allure\allure-model\2.14.0\2df7495bd8de5b16ff0756783326e80c2546a411\allure-model-2.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.dataformat\jackson-dataformat-xml\2.12.3\d2a90460fecffa0c7ae9fd836272bbce91b5241a\jackson-dataformat-xml-2.12.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.module\jackson-module-jaxb-annotations\2.12.3\ea843951d2efdd5e6844d6faa8aabf71698463a8\jackson-module-jaxb-annotations-2.12.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.12.3\7275513412694a1aafd08c0287f48469fa0e6e17\jackson-annotations-2.12.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.12.3\deb23fe2a7f2b773e18ced2b50d4acc1df8fa366\jackson-core-2.12.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.dataformat\jackson-dataformat-yaml\2.12.3\bedc092db8e9edbba1d243309b563599bff08761\jackson-dataformat-yaml-2.12.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.12.3\d6153f8fc60c479ab0f9efb35c034526436a4953\jackson-databind-2.12.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.tika\tika-core\1.26\9715ed7afac774b2de2e6689d16d1639c29eaf5a\tika-core-1.26.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.jooq\joor-java-8\0.9.14\c70edb9f53a31548fbb8721ea2b357e67fab72a1\joor-java-8-0.9.14.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.beust\jcommander\1.81\9ca9dd27bb28e5990ad01aec5bb2989f50b6ff3e\jcommander-1.81.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.8.0\92999e26e6534606b5678014e66948286298a35c\commons-io-2.8.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-server\9.4.20.v20190813\d4ee11134bca83db85919a1710fce022c67df3b7\jetty-server-9.4.20.v20190813.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.13\853b96d3afbb7bf8cc303fe27ee96836a10c1834\httpcore-4.4.13.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.opencsv\opencsv\4.6\b7ce164e9e75be4b5eb42fd89c9c53ebecea6729\opencsv-4.6.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\commons-beanutils\commons-beanutils\1.9.3\c845703de334ddc6b4b3cd26835458cb1cba1f3d\commons-beanutils-1.9.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.15\49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d\commons-codec-1.15.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-text\1.3\9abf61708a66ab5e55f6169a200dbfc584b546d9\commons-text-1.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.12.0\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e\commons-lang3-3.12.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.yaml\snakeyaml\1.27\359d62567480b07a679dc643f82fc926b100eed5\snakeyaml-1.27.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\javax.servlet\javax.servlet-api\3.1.0\3cd63d075497751784b2fa84be59432f4905bf7c\javax.servlet-api-3.1.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-http\9.4.20.v20190813\edda2fd904a881114aba79e2f881c6f4004e8148\jetty-http-9.4.20.v20190813.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-io\9.4.20.v20190813\b246c5e350d0aa1b310c07ec362755c34a1cc8cb\jetty-io-9.4.20.v20190813.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\log4j\log4j\1.2.17\5af35056b4d257e4b64b9e8069c0746e8b08629f\log4j-1.2.17.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\javax.xml.bind\jaxb-api\2.3.1\8531ad5ac454cc2deb9d4d32c40c4d7451939b5d\jaxb-api-2.3.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.freemarker\freemarker\2.3.31\cd4fc0942b4a8bdb19f3b669aa42136fb54feb55\freemarker-2.3.31.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-java\3.141.59\e8e20b741299cb8ffedbd2925a3ab69d08b41063\selenium-java-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.rauschig\jarchivelib\1.1.0\67d50e8656636aa652f745a5d9a437bccdf1346\jarchivelib-1.1.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-chrome-driver\3.141.59\67137314736c6a2f39a8aa59a562e9616ae5f77e\selenium-chrome-driver-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-edge-driver\3.141.59\fc09c66f2d0b33b0816d770761ad1d599ef0df29\selenium-edge-driver-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-firefox-driver\3.141.59\a99f2fe2a42747ed9809d4f62f51a9e1b336dde8\selenium-firefox-driver-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-ie-driver\3.141.59\677b9b414a3a9bb2aeea89042a7b326edeb13a82\selenium-ie-driver-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-opera-driver\3.141.59\6b11ed01182bfd8bb62ddeae34cf9eadd3cfc7ff\selenium-opera-driver-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-safari-driver\3.141.59\a32b5b88f46ea4b0356079f0d2e2217543923046\selenium-safari-driver-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-support\3.141.59\8735de5049acf0e761defc65ee5837d6541abaf5\selenium-support-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-remote-driver\3.141.59\1c79ca890c312ff9916bd95df4f0c5182ec722d8\selenium-remote-driver-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\30.1.1-jre\87e0fd1df874ea3cbe577702fe6f17068b790fd8\guava-30.1.1-jre.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.eclipse.jetty\jetty-util\9.4.20.v20190813\8ee753d673a124ba2880361871ab13f6863b2d40\jetty-util-9.4.20.v20190813.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark\0.62.2\606a88e1d15aa8debd97cb5dfdf788ddc6fb5b5e\flexmark-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.fasterxml.woodstox\woodstox-core\6.2.4\16b9f8ab972e67eb21872ea2c40046249d543989\woodstox-core-6.2.4.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.codehaus.woodstox\stax2-api\4.2.1\a3f7325c52240418c2ba257b103c3c550e140c83\stax2-api-4.2.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\javax.activation\javax.activation-api\1.2.0\85262acf3ca9816f9537ca47d5adeabaead7cb16\javax.activation-api-1.2.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\ru.qatools.commons\properties\2.0.RC5\9c90f0e4211aedcc39c18cd77b2268ddb6563bad\properties-2.0.RC5.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.github.baev\jaxb-utils\1.0\7463f66662f5bc4ea6e61de04bfccfafe6125d67\jaxb-utils-1.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.seleniumhq.selenium\selenium-api\3.141.59\e006ffd3aa7841e6e9125d9e6691b3a6b7592b05\selenium-api-3.141.59.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy\1.8.15\cb36fe3c70ead5fcd016856a7efff908402d86b8\byte-buddy-1.8.15.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-exec\1.3\8dfb9facd0830a27b1b5f29f84593f0aeee7773b\commons-exec-1.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.11.0\75966e05a49046ca2ae734e5626f28837a8d1e82\okhttp-3.11.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.14.0\102d7be47241d781ef95f1581d414b0943053130\okio-1.14.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.13.1\f9577f3732bb7caa4fee8aba5053158f4010c118\jsoup-1.13.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.20\b8df472b31e1f17c232d2ad78ceb1c84e00c641b\commons-compress-1.20.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents.core5\httpcore5-h2\5.1.1\f492295d79745b6fb92e0c54f44561bde2587f1c\httpcore5-h2-5.1.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents.core5\httpcore5\5.1.1\6b62fefef0334c7b569114f6a06705e8e2e22eb2\httpcore5-5.1.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.8.0\6b83e4a33220272c3a08991498ba9dc09519f190\checker-qual-3.8.0.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.5.1\562d366678b89ce5d6b6b82c1a073880341e3fba\error_prone_annotations-2.5.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-collections4\4.2\54ebea0a5b653d3c680131e73fe807bb8f78c4ed\commons-collections4-4.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-format\0.62.2\58548be1fc0682698721c0c278451a41f361d3a\flexmark-util-format-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-ast\0.62.2\c0b998d5570295f104a4ffee4f8eec305d7db327\flexmark-util-ast-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-builder\0.62.2\22c85efb51d4aa25540b8b0d880be7ad4a8baec1\flexmark-util-builder-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-dependency\0.62.2\ae5afa76a669e06b3a65255c2ed775ede5cd3eb1\flexmark-util-dependency-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-html\0.62.2\6d830cb37e48fd9dca44bf15fbc3a86aa7d82c5a\flexmark-util-html-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-sequence\0.62.2\87af2803a63b5b07cc42d9c1d98f8ecd4f83fbcc\flexmark-util-sequence-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-collection\0.62.2\85253a62761533ce7709f81b0c581c8473f825ec\flexmark-util-collection-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-data\0.62.2\2df8ce1abab2e40edc7d340962025ee1dd09fe02\flexmark-util-data-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-misc\0.62.2\18133dd81887c512e2f56feb3c14a8a1210f30ea\flexmark-util-misc-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\com.vladsch.flexmark\flexmark-util-visitor\0.62.2\ca49bd94860a5ccedd82bde96ece831f16c66ff1\flexmark-util-visitor-0.62.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\jakarta.xml.bind\jakarta.xml.bind-api\2.3.2\8d49996a4338670764d7ca4b85a1c4ccf7fe665d\jakarta.xml.bind-api-2.3.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\jakarta.activation\jakarta.activation-api\1.2.1\562a587face36ec7eff2db7f2fc95425c6602bc1\jakarta.activation-api-1.2.1.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\commons-collections\commons-collections\3.2.2\8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5\commons-collections-3.2.2.jar;C:\Users\torfa\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\15.0\d40ab99147584cf6cfb5245be67b3fee2c7220f9\annotations-15.0.jar
+user.name=torfa
+java.vm.specification.version=1.8
+sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 3'
+java.home=C:\Program Files\Java\jdk1.8.0_202\jre
+sun.arch.data.model=64
+user.language=ru
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_202
+java.ext.dirs=C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes
+java.vendor=Oracle Corporation
+org.gradle.test.worker=3
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+sun.desktop=windows
+sun.cpu.isalist=amd64
+---- Command Line ---
+Empty
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+Empty
